@@ -29,7 +29,6 @@ class SamplePageState extends State<SamplePage> {
   File _image;
   final picker = ImagePicker();
 
-  // 画像の読み込み
   Future _getCameraImage() async {
     final pickedFile = await picker.getImage(source: ImageSource.camera);
     setState(() {
@@ -61,7 +60,7 @@ class SamplePageState extends State<SamplePage> {
         ),
       ),
       floatingActionButton: Column(
-        verticalDirection: VerticalDirection.up, // childrenの先頭を下に配置
+        verticalDirection: VerticalDirection.up,
         mainAxisSize: MainAxisSize.min,
         children: <Widget>[
           Container(
